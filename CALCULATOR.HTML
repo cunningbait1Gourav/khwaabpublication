@@ -1,0 +1,326 @@
+<!DOCTYPE html>
+<HTML>
+<head>
+	<title>
+		calculator
+	</title>
+	<style>
+		*
+		{
+			margin:0px;
+			padding:0px;
+		}
+		p
+		{
+			color:white;
+		}
+		input{
+			width:200px;
+			height:50px;
+		}
+		select
+		{
+
+		}
+	</style>
+	<link href="https://fonts.googleapis.com/css2?family=Lobster&display=swap" rel="stylesheet">
+</head>
+<body style="background-image:url('calc.jpg'); ">
+	<div style="height:50px;width:100%;display:flex;flex-wrap:wrap;justify-content: space-between;background-color:grey;">
+		<div  style="margin:20px">contact us:6207011593</div>
+		<div style="margin:20px">email:khwaabpublication@gmail.com</div>
+	</div>
+
+	<h1 style="text-align: center; margin-top:40px;size:4rem;"> 
+		AUTHOR'S 
+	</h1>
+	<h1 style="text-align: center; size:4rem;">
+		EARNING CALCULATOR
+	</h1>
+	<div style="background-color:#3385ff;margin:70px;height:600px">
+		<div style="background-color:#1a0033;height:40px; ">
+
+		</div>
+		<div style="transform:translateY(20px);">
+	<div style="margin-top:50px;margin-left:10px;display:flex;flex-wrap: wrap;justify-content: space-evenly;">
+		<p style="margin:20px">
+			ENTER NO OF PAGES:
+		</p>
+<input type="textbox" id="npages" type="number" placeholder="No of pages" min="40" max="300" style="transform: translateX(17px);" >
+</div>
+<div style="display:flex;flex-wrap: wrap;justify-content:space-evenly;">
+	<p style="margin:20px">
+			ENTER DIMENSIONS OF BOOK:
+		</p>
+<select id="dropdown1" style="height:50px;width:200px;border-radius: 25px;margin-top:20px;">SELECT SIZE
+	<option value=0 >5in x 8in
+	</option>
+	<option value=0 >5.5in x 8.5in
+	</option>
+	<option value=0 >6in x 9in
+	</option>
+	<option value=1 >8.5in x 8.5in
+	</option>
+	<option value=1 >8.5in x 11in
+	</option>
+</select>
+</div>
+
+<div style="margin-top:50px;margin-left:10px;display:flex;flex-wrap: wrap;justify-content: space-evenly;">
+<button onclick="myfunction()" style="background-color:#00c;color:#fff;height:50px;width:100px;border-radius:25px;font-weight:bolder;font-family: lobster">
+	SUBMIT
+</button>
+</div>
+<div style="display:flex;flex-wrap: wrap;justify-content:space-evenly; margin-top: 20px;">
+	<p style="margin:20px;transform: translateX(-20px);">
+		MINIMUM RECOMMENDED PRICE:
+	</p>
+
+<div id="price" style="background-color:#fff;border-color:#000;padding:10px;width:250px; height:20px;transform: translateX(-30px);">
+ 	price
+</div>
+</div>
+<div style="margin-top:20px;margin-left:10px;display:flex;flex-wrap: wrap;justify-content: space-evenly;">
+	<div>
+		<p>ENTER MRP:</p>
+		<input type="textbox" id="MRP" type="number" placeholder="Maximum Retail Price" >
+	</div>
+	<button onclick="myfunction2()" style="background-color:#00c;color:#fff;height:50px;width:200px;margin-top:20px ;border-radius:25px;font-weight:bolder;font-family: lobster">Calculate Author's earnings</button>
+</div>
+
+</div>
+<div style="margin-top:20px;margin-left:10px;display:flex;flex-wrap: wrap;justify-content: space-evenly;">
+	<p id="new" style="background-color:#fff;border-color:#000;color:black;margin:20px;padding:10px;width:150px; height:20px;">Author's earning</p>
+	</div>
+
+</div>
+	<script>
+		var price=0;
+		function myfunction()
+{
+		
+	var size= document.getElementById("dropdown1").value;
+	var count=1;
+	var npages = document.getElementById("npages").value;
+	console.log(npages);
+	console.log(size);
+	if(size == 0)
+	{
+	if(npages>=40&&npages <= 50)
+	{
+		price= 100;
+	}
+	else if (npages>50 && npages<= 60) 
+	{
+		price= 110;
+	}
+	else if (npages>60 && npages<=70) 
+	{
+		price= 120;
+	}
+	else if (npages>70 && npages<=80) 
+	{
+		price= 130;
+	}
+	else if (npages>80 && npages<=90) 
+	{
+		price= 140;
+	}
+	else if (npages>90 && npages<=100) 
+	{
+		price= 150;
+	}
+	else if (npages>100 && npages<=120) 
+	{
+		price= 160;
+	}
+	else if (npages>110 && npages<=120) 
+	{
+		price= 170;
+	}
+	else if (npages>120 && npages<= 130) 
+	{
+		price= 180;
+	}
+	else if (npages>130 && npages<= 140) 
+	{
+		price= 190;
+	}
+	else if (npages>140 && npages<=150) 
+	{
+		price= 200;
+	}
+	else if (npages>150 && npages<=160) 
+	{
+		price= 210;
+	}
+	else if (npages>160 && npages<=170) 
+	{
+		price= 220;
+	}
+	else if (npages>170 && npages<=180) 
+	{
+		price= 230;
+	}
+	else if (npages>180 && npages<=190) 
+	{
+		price= 240;
+	}
+	else if (npages>190 && npages<=200) 
+	{
+		price= 250;
+	}
+	else if (npages>200 && npages<=210) 
+	{
+		price= 260;
+	}
+	else if (npages>210 && npages<=220) 
+	{
+		price= 270;
+	}
+	else if (npages>220 && npages<=230) 
+	{
+		price= 290;
+	}
+	else if (npages>230 && npages<=250) 
+	{
+		price= 300;
+	}
+	else if (npages>250 && npages<280) 
+	{
+		price= 350;
+	}
+	else if (npages>280 && npages<=300) 
+	{
+		price= 400;
+	}
+	else
+	{
+		document.getElementById("price").innerHTML= "please enter between 40 and 300";
+		return
+	}
+	}
+
+
+	else if(size == 1)
+	{
+	if(npages>=40 &&npages<= 50)
+	{
+		price= 120;
+	}
+	else if (npages>50 && npages<= 60) 
+	{
+		price= 130;
+	}
+	else if (npages>60 && npages<=70) 
+	{
+		price= 140;
+	}
+	else if (npages>70 && npages<=80) 
+	{
+		price= 150;
+	}
+	else if (npages>80 && npages<=90) 
+	{
+		price= 160;
+	}
+	else if (npages>90 && npages<=100) 
+	{
+		price= 170;
+	}
+	else if (npages>100 && npages<=120) 
+	{
+		price= 180;
+	}
+	else if (npages>110 && npages<=120) 
+	{
+		price= 190;
+	}
+	else if (npages>120 && npages<= 130) 
+	{
+		price= 200;
+	}
+	else if (npages>130 && npages<= 140) 
+	{
+		price= 210;
+	}
+	else if (npages>140 && npages<=150) 
+	{
+		price= 220;
+	}
+	else if (npages>150 && npages<=160) 
+	{
+		price= 230;
+	}
+	else if (npages>160 && npages<=170) 
+	{
+		price= 240;
+	}
+	else if (npages>170 && npages<=180) 
+	{
+		price= 250;
+	}
+	else if (npages>180 && npages<=190) 
+	{
+		price= 260;
+	}
+	else if (npages>190 && npages<=200) 
+	{
+		price= 270;
+	}
+	else if (npages>200 && npages<=210) 
+	{
+		price= 280;
+	}
+	else if (npages>210 && npages<=220) 
+	{
+		price= 290;
+	}
+	else if (npages>220 && npages<=230) 
+	{
+		price= 310;
+	}
+	else if (npages>230 && npages<=250) 
+	{
+		price= 320;
+	}
+	else if (npages>250 && npages<280) 
+	{
+		price= 370;
+	}
+	else if (npages>280 && npages<=300) 
+	{
+		price= 420;
+	}
+	else
+	{
+		document.getElementById("price").innerHTML=`please enter between 40 and 300</div>`;
+	}
+	}
+	document.getElementById("price").innerHTML=`Rs. ${price}`;
+console.log(price);
+}
+
+function myfunction2()
+{
+	var a= document.getElementById("MRP").value;
+	var b= a - price;
+	if(b < 0)
+	{
+		document.getElementById("new").innerHTML= `Not possible`;
+	}
+	else
+	{
+		document.getElementById("new").innerHTML= `Rs. ${b}`;
+	}
+	console.log(a);
+	
+}
+
+price=null;
+npages=null;
+size=null;
+a=null;
+
+</script>
+</body>
