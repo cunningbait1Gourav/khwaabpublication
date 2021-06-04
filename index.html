@@ -23,6 +23,10 @@
 			width:200px;
 			height:50px;
 		}
+		.move5
+		{
+			transform:translateX(35px);
+		}
 		@media screen and (min-width: 500px)
 		{
 			.go
@@ -47,6 +51,11 @@
 			{
 				transform: translateX(-30px);
 			}
+			.move5 
+			{
+			transform:translateY(10px)translateX(25px);	
+
+			}
 
 		}
 
@@ -68,7 +77,7 @@
 		<div style="background-color:#1a0033;height:40px; ">
 
 		</div>
-		<div class="move">
+		<div class="go" class="move">
 	<div style="margin-top:50px;margin-left:10px;display:flex;flex-wrap: wrap;justify-content: space-evenly;">
 		<p style="margin:20px">
 			ENTER NO OF PAGES:
@@ -117,8 +126,13 @@
 
 
 <div style="margin-top:20px;margin-left:10px;display:flex;flex-wrap: wrap;justify-content: space-evenly;">
-	<p id="new" style="background-color:#fff;border-color:#000;color:black;margin:20px;padding:10px;width:150px; height:20px;">Author's earning</p>
+	<div><p class="move5">Amazon stores:</p>
+	<p id="new" style="background-color:#fff;border-color:#000;color:black;margin:20px;padding:10px;width:150px; height:20px;">Amazon stores</p>
+</div>
+<div>
+	<p class="move5">khwaab publication stores:</p>
 	<p id="khwaab" style="background-color:#fff;border-color:#000;color:black;margin:20px;padding:10px;width:250px; height:20px;">khwaab publication stores</p>
+</div>
 	
 		</div>
 	</div>
